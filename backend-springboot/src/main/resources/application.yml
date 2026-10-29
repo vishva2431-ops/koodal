@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:8080}
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: koodal-job-assistant
+  data:
+    mongodb:
+      # Connects to MongoDB Atlas Free Tier (M0 Cluster)
+      uri: ${MONGODB_URI:mongodb+srv://developer:secret@cluster0.free.mongodb.net/koodal_jobs?retryWrites=true&w=majority}
+      database: koodal_jobs
+      auto-index-creation: true
+
+app:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,https://*.vercel.app,https://*.onrender.com}
+  security:
+    personal-token: ${PERSONAL_API_TOKEN:koodal-personal-key}
+
+logging:
+  level:
+    root: INFO
+    com.koodal: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

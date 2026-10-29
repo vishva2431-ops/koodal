@@ -1,0 +1,6 @@
+{
+  "name": "Koodal - Personal Tech Job Search & Application Assistant",
+  "description": "Personal job search and application assistant for React, Frontend, and Full Stack Developer roles across Tamil Nadu with compliant discovery, rules-based matching, assisted applications, root-cause recovery, and Spring Boot architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
